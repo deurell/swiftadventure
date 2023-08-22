@@ -1,0 +1,55 @@
+{
+    "startingRoom": 1,
+    "rooms": [
+        {
+            "id": 1,
+            "description": "You are in the entrance hall of an ancient temple. The floor is dusty, and the atmosphere is eerily silent. Cobwebs are in every corner.",
+            "paths": {
+                "north": {
+                    "roomID": 2,
+                    "isLocked": true
+                }
+            },
+            "items": [
+                {
+                    "name": "Gem",
+                    "description": "A shiny blue gem that seems to emit a faint glow.",
+                    "useEffects": {
+                        "gemEffect": {
+                            "originatingRoomID": 2,
+                            "target": "Chest",
+                            "action": "open",
+                            "message": "You place the gem into a slot on the chest. It creaks open, revealing a stash of gold coins!"
+                        }
+                    }
+                },
+                {
+                    "name": "Key",
+                    "description": "A rusty old key.",
+                    "useEffects": {
+                        "keyEffect": {
+                            "originatingRoomID": 1,
+                            "target": "north",
+                            "action": "unlock",
+                            "message": "You hear a click as the door to the north unlocks."
+                        }
+                    }
+                }
+            ],
+            "characters": []
+        },
+        {
+            "id": 2,
+            "description": "You find yourself in a grand chamber, illuminated by torches. There's an ornate chest in the middle of the room.",
+            "paths": {},
+            "items": [
+                {
+                    "name": "Chest",
+                    "description": "A large, ornate chest with intricate carvings. It seems to have a slot for something.",
+                    "useEffects": {}
+                }
+            ],
+            "characters": []
+        }
+    ]
+}
